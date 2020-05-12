@@ -1,0 +1,1681 @@
+
+
+/* Animations */
+@keyframes sdIconAnim {
+    0% {
+        color: #8f86b3;
+    }
+
+    25% {
+        color: white;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    100% {
+        color: #8f86b3;
+    }
+}
+/* Menu Font */
+ul#sdMenuFontSize {
+    position: absolute;
+    margin: 1em;
+    right: 0;
+    list-style: none;
+}
+
+    ul#sdMenuFontSize > li {
+        display: inline-block;
+        padding: 0 .5em;
+        color: #438eb9;
+        cursor: pointer
+    }
+
+        ul#sdMenuFontSize > li:first-child {
+            font-size: .8em
+        }
+
+        ul#sdMenuFontSize > li:last-child {
+            font-size: 1.2em;
+        }
+
+/* Common Controls */
+.sdModal {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #0302099c;
+    z-index: 99;
+    padding: 5em;
+}
+
+    .sdModal > .sdFormContainer {
+        width: 100%;
+        height: 90%;
+        overflow: auto;
+    }
+
+/* SD DIALOG BOX */
+
+.sdDialog {
+    position: fixed;
+    background: #00000070;
+    z-index: 9999999999999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+    .sdDialog > div {
+        position: absolute;
+        width: 440px;
+        height: 200px;
+        background: white;
+        top: 20%;
+        left: 50%;
+        margin-left: -220px;
+        border-radius: 8px;
+    }
+
+        .sdDialog > div > div {
+            width: 100px;
+            height: 200px;
+            float: left;
+        }
+
+            .sdDialog > div > div > b {
+                margin: 50% 27%;
+                display: block;
+                font-size: 4em;
+            }
+
+        .sdDialog > div > ul > li:first-child {
+            border-bottom-left-radius: 8px;
+        }
+
+        .sdDialog > div > ul > li:last-child {
+            border-bottom-right-radius: 8px;
+        }
+
+        .sdDialog > div > h2 {
+            margin: .4em 0.2em 0;
+        }
+
+        .sdDialog > div > p {
+            font-size: 1.1em;
+            padding: .5em 1em 1em;
+        }
+
+        .sdDialog > div > input {
+            width: 70%;
+        }
+
+.sdAlert > ul, .sdConfirm > ul, .sdPrompt > ul {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0em;
+    cursor: pointer;
+    color: white;
+    font-size: 1.7em;
+}
+
+.sdAlert, .sdConfirm, .sdPrompt {
+    box-shadow: -1px 2px 9px #6e9ec3;
+}
+
+    .sdAlert > ul > li, .sdPrompt > ul > li {
+        padding: .2em;
+        background: linear-gradient(#3597e4,#4dacf8,#3597e4);
+    }
+
+        .sdAlert > ul > li:hover, .sdPrompt > ul > li:hover {
+            background: linear-gradient(#3597e4,#79bbf0,#3597e4);
+        }
+
+    .sdAlert > div > b, .sdPrompt > div > b {
+        color: #3597e4;
+    }
+
+    .sdConfirm > div > b {
+        color: orange;
+    }
+
+    .sdConfirm > ul > li, .sdPrompt > ul > li {
+        width: 50%;
+        display: inline-block;
+        padding: .2em;
+    }
+
+        .sdConfirm > ul > li:first-child, .sdPrompt > ul > li:first-child {
+            background: linear-gradient(#e0e0e0, #fbfbfb,#e1e1ea);
+            color: gray;
+        }
+
+            .sdConfirm > ul > li:first-child:hover, .sdPrompt > ul > li:first-child:hover {
+                background: linear-gradient(#d5cfcf, #f2f1f1,#cdcdd1);
+                color: gray;
+            }
+
+
+        .sdConfirm > ul > li:last-child {
+            background: linear-gradient(orange, #ffcf55,orange);
+        }
+
+            .sdConfirm > ul > li:last-child:hover {
+                background: linear-gradient(#e69708, #ffcf55,#e69708);
+            }
+
+
+/* SD SLIDER */
+
+.sdSlider {
+    position: relative;
+    height: 300px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+    .sdSlider > .sdSliderItem {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+        -webkit-transition: opacity 1s;
+        -moz-transition: opacity 1s;
+        -o-transition: opacity 1s;
+        transition: opacity 1s;
+    }
+
+        .sdSlider > .sdSliderItem.showing {
+            opacity: 1;
+            z-index: 2;
+        }
+
+    .sdSlider > .controls {
+        display: none;
+    }
+
+
+.sdBrandFooterControl {
+    padding: 0;
+    margin: 1em 0;
+    font-size: 11px;
+    color: #9c9fa0;
+    text-align: right;
+}
+
+    .sdBrandFooterControl > img {
+        height: 32px;
+    }
+
+.sdLoader {
+    position: absolute;
+    z-index: 1;
+    margin-top: -1.5em;
+    right: 3em;
+}
+
+.buttonsCommand {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .buttonsCommand > li {
+        display: inline-block
+    }
+
+        .buttonsCommand > li > ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+            position: absolute;
+        }
+
+        .buttonsCommand > li:hover > ul {
+            display: block;
+        }
+
+.highlighted {
+    background: yellow;
+}
+
+#modalContainer {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
+    /*background-image: url(tp.png);  required by MSIE to prevent actions on lower z-index elements */
+}
+
+#alertBox {
+    position: relative;
+    width: 300px;
+    min-height: 100px;
+    margin-top: 50px;
+    border: 1px solid #666;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 20px 30px;
+}
+
+#modalContainer > #alertBox {
+    position: fixed;
+}
+
+#alertBox h1 {
+    margin: 0;
+    font: bold 0.9em verdana,arial;
+    background-color: #3073BB;
+    color: #FFF;
+    border-bottom: 1px solid #000;
+    padding: 2px 0 2px 5px;
+}
+
+#alertBox p {
+    font: 0.7em verdana,arial;
+    padding-left: 5px;
+    margin-left: 40px;
+    text-align: justify;
+    margin-right: 36px;
+    font-size: .85em;
+    padding-top: 1em;
+}
+
+    #alertBox p:before {
+        content: "i";
+        font-size: 2.5em;
+        color: #357ebd;
+        position: absolute;
+        left: 10px;
+        font-family: Webdings;
+    }
+
+#alertBox div {
+    text-align: center
+}
+
+
+
+#alertBox #closeBtn, #alertBox #cancelBtn {
+    display: inline-block;
+    position: relative;
+    margin: 5px 1em;
+    padding: 7px;
+    border: 0 none;
+    width: 70px;
+    font: 0.7em verdana,arial;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFF;
+    background-color: #357EBD;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.jHelp {
+    position: absolute;
+    background: #2e6e9e;
+    border: 1px solid;
+    padding: .3em 1em;
+    color: white;
+    font-size: 10px;
+    border-radius: 4px;
+    margin-top: -35px;
+    margin-left: 32px;
+    font-family: tahoma;
+    font-weight: 100;
+    max-width: 300px;
+    min-width: 200px;
+    z-index: 1;
+}
+
+    .jHelp:after {
+        content: "";
+        bottom: -10px;
+        border: 5px solid transparent;
+        border-top-color: #2e6e9e;
+        position: absolute;
+        left: 5px;
+    }
+
+    .jHelp ~ sdIcon:before {
+        content: "i";
+        color: #8f86b3;
+        position: absolute;
+        font-size: 12px;
+        font-family: webdings;
+        font-weight: 100;
+        animation-name: sdIconAnim;
+        animation-duration: 10s;
+        animation-delay: 6s;
+        animation-iteration-count: infinite;
+    }
+
+sdIcon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+}
+
+
+div#jHelp {
+    background: #dfeffc;
+    padding: 2em;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    box-shadow: 5px 5px 20px #9595a2;
+    font-size: 1.3em;
+    font-family: courier new;
+    overflow: hidden;
+    z-index: 9
+}
+
+    div#jHelp > div {
+        overflow-y: scroll;
+        height: 88%;
+    }
+
+    div#jHelp > span {
+        position: absolute;
+        top: .5em;
+        right: 1em;
+        cursor: pointer
+    }
+
+ul#sdHelp > li b {
+    color: #4080b5;
+}
+
+ul#sdHelp > li > h6 {
+    color: #4080b5;
+    font-size: 2em;
+}
+
+ul#sdHelp > li {
+    margin-bottom: 2em;
+    border-bottom: 1px dotted #0921ae;
+    padding-bottom: 1em;
+}
+
+
+
+ul#ulMenuLine {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    ul#ulMenuLine > li > ul > li {
+        display: inline-block;
+    }
+
+    ul#ulMenuLine > li > ul {
+        position: absolute;
+        background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);
+        margin-top: -24px;
+        margin-left: 28px;
+        display: none;
+        padding: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    ul#ulMenuLine > li:hover {
+        background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+        ul#ulMenuLine > li:hover > ul {
+            display: block
+        }
+/* styles SD.Theme.Basic */
+
+.jTable {
+    width: 100%;
+}
+
+    .jTable td, .jTable th {
+        padding: 3px 10px;
+        font-size: 8pt;
+        white-space: nowrap
+    }
+
+    .jTable > thead > tr > th, .jTable > tbody > tr > th, .jTable > tfoot > tr > th {
+        border: 1px solid #c5dbec !important;
+        background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);
+        font-weight: bold;
+        color: #2e6e9e;
+    }
+
+    .jTable > tbody > tr:nth-child(odd) > td {
+        /*Blue
+        background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);*/
+        /*White*/
+        background: linear-gradient(#eff2f5,#f0feff,#ffffff,#ebf8ff)
+    }
+
+    .jTable > tbody > tr > td {
+        border: 1px solid #a6c9e2;
+        /*Blue
+        background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);*/
+        /*White*/
+        background: linear-gradient(#eff2f5,#f0feff,#ffffff,#ebf8ff);
+        color: #2e6e9e;
+    }
+
+    .jTable > tbody > tr:hover > td, .jTable > tbody > tr:nth-child(odd):hover > td {
+        border: 1px solid #79b7e7;
+        background: linear-gradient(#dfeffc,#95dbf3,#60d1ea,#dfe5f3);
+    }
+
+    .jTable > tbody > tr > td::before {
+        display: none;
+    }
+
+    .jTable > tbody > tr.selected > td {
+        border: 1px solid #fad42e;
+       /* background: #fbec88 url(ui-bg_flat_55_fbec88_40x100.png) 50% 50% repeat-x;*/
+        color: #363636;
+    }
+
+    .jTable .Added > td {
+        background: #bdf9bd !important;
+        color: green;
+    }
+
+    .jTable .Modified > td {
+        background: #f6f1a8 !important;
+        color: #946000;
+    }
+
+    .jTable .Deleted > td {
+        background: #f6dfe3 !important;
+        color: red;
+        text-decoration: line-through;
+    }
+
+
+#jSearch {
+    width: 100%;
+    height: 200px;
+    position: fixed;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #438eb9;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    background: white;
+    box-shadow: -2px -2px 17px #62a8d1;
+}
+
+    #jSearch > input {
+        width: 100%;
+    }
+
+    #jSearch > div {
+        overflow-y: auto;
+        height: 140px;
+    }
+
+
+.jLabel {
+    color: darkgray;
+    font-size: .9em;
+}
+
+.jButton {
+    display: inline-block;
+    border: 1px solid lightgray;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    float: right;
+    padding: 9px 7px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #337ab7;
+}
+
+    .jButton:hover {
+        background-color: cornflowerblue;
+        color: white;
+    }
+
+
+
+
+.sdControlContainer {
+    margin: 0 0 1.2em;
+    display: inline-block;
+    width: 25%;
+    position: relative
+}
+
+    .sdControlContainer > span {
+        font-size: .8em;
+        color: #62a8d1
+    }
+
+.jFormContainer {
+    background: #dfeffc;
+    padding: 2em;
+    position: relative;
+}
+
+.jForm {
+    padding: 1em;
+    background: #dfeffc;
+}
+
+    .jForm .jLabel {
+        color: #2e6e9e;
+    }
+
+    .jForm .jButton {
+        top: .5em;
+        right: .5em;
+    }
+
+
+    .jForm > .jButton:nth-child(2) {
+        right: 2.5em !important;
+    }
+
+    .jForm > .jButton:nth-child(3) {
+        right: 4.5em !important;
+    }
+
+    .jForm > .jButton:nth-child(4) {
+        right: 6.5em !important;
+    }
+
+    .jForm > .jButton:nth-child(5) {
+        right: 8.5em !important;
+    }
+
+    .jForm > .jButton:nth-child(6) {
+        right: 10.5em !important;
+    }
+
+
+ul.jFormMenuMaster {
+    list-style: none;
+}
+
+
+
+
+
+
+.jList {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+    .jList > li {
+        list-style: none;
+        width: 13%;
+        overflow: hidden;
+        float: left;
+        margin: .5%;
+        height: 255px;
+        margin-bottom: 1em;
+        border-bottom: 1px solid red;
+        position: relative;
+    }
+
+        .jList > li > small {
+            font-size: .5em;
+            position: absolute;
+            right: 0;
+            background: white;
+            padding: .5em;
+            top: 172px;
+            border-top-left-radius: 9px;
+        }
+
+        .jList > li > span:first-child {
+            background: red
+        }
+
+        .jList > li > h2 {
+            font-size: 1em;
+            height: 60px
+        }
+
+        .jList > li > img {
+            width: 100%;
+            height: 100px
+        }
+
+        .jList > li > p {
+            font-size: .6em;
+            text-align: justify
+        }
+
+        .jList > li > span {
+            font-size: .5em;
+            position: absolute;
+            left: 0;
+            background: white;
+            padding: .5em;
+            border-bottom-right-radius: 9px;
+        }
+
+
+.jFormMenuDetail {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .jFormMenuDetail > li > ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+.jForm .jButton > span {
+    display: none;
+}
+
+ul.jFormMenuMaster {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+}
+
+    ul.jFormMenuMaster > li {
+        width: 32px;
+        height: 32px;
+        margin: .3em;
+        display: inline-block;
+    }
+
+.jFormMenuDetail > li > ul {
+    display: none;
+    position: absolute
+}
+
+.jFormMenuDetail > li:hover > ul {
+    display: block;
+}
+
+/* styles SD.Theme.Delux */
+
+#sdFrmDetail {
+    width: 100%;
+    overflow: auto;
+    max-height: 500px;
+}
+
+.sdTable {
+    width: 100%;
+}
+
+    .sdTable td, .sdTable th {
+        padding: 3px 10px;
+        font-size: 8pt;
+        white-space: nowrap
+    }
+
+    .sdTable > thead > tr > th, .sdTable > tbody > tr > th, .sdTable > tfoot > tr > th {
+        border: 1px solid #c5dbec !important;
+        background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);
+        font-weight: bold;
+        color: #2e6e9e;
+    }
+
+        .sdTable > thead > tr > th > a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+    .sdTable > thead > tr:first-child > th {
+        z-index: 2;
+        position: sticky;
+        left: 0px;
+        top: 0px;
+    }
+
+    .sdTable > tbody > tr:nth-child(odd) > td {
+        /*Blue
+        background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);*/
+        /*White*/
+        background: linear-gradient(#eff2f5,#f0feff,#ffffff,#ebf8ff)
+    }
+
+    .sdTable > tbody > tr > td {
+        border: 1px solid #a6c9e2;
+        /*Blue
+        background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);*/
+        /*White*/
+        background: linear-gradient(#eff2f5,#f0feff,#ffffff,#ebf8ff);
+        color: #2e6e9e;
+        min-height: 32px;
+    }
+
+        .sdTable > tbody > tr > td:first-child {
+            position: sticky;
+            left: 0px;
+            z-index: 1;
+        }
+
+    .sdTable > thead > tr:first-child > th:first-child {
+        z-index: 3;
+    }
+
+    .sdTable > tbody > tr:hover > td, .sdTable > tbody > tr:nth-child(odd):hover > td {
+        border: 1px solid #79b7e7;
+        background: linear-gradient(#dfeffc,#95dbf3,#60d1ea,#dfe5f3);
+    }
+
+    .sdTable > tbody > tr > td::before {
+        display: none;
+    }
+
+    .sdTable > tbody > tr.selected > td {
+        border: 1px solid #fad42e;
+        /* background: #fbec88 url(ui-bg_flat_55_fbec88_40x100.png) 50% 50% repeat-x; */
+        color: #363636;
+    }
+
+    .sdTable .Added > td {
+        background: #bdf9bd !important;
+        color: green;
+    }
+
+    .sdTable .Modified > td {
+        background: #f6f1a8 !important;
+        color: #946000;
+    }
+
+    .sdTable .Deleted > td {
+        background: #f6dfe3 !important;
+        color: red;
+        text-decoration: line-through;
+    }
+
+#jSearch {
+    width: 100%;
+    height: 200px;
+    position: fixed;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #438eb9;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    background: white;
+    box-shadow: -2px -2px 17px #62a8d1;
+}
+
+    #jSearch > input {
+        width: 100%;
+    }
+
+    #jSearch > div {
+        overflow-y: auto;
+        height: 140px;
+    }
+
+
+.sdLabel {
+    color: darkgray;
+    font-size: .9em;
+}
+
+.sdButton {
+    cursor: pointer;
+}
+
+    .sdButton:hover {
+    }
+
+
+
+
+.sdControlContainer {
+    margin: 0 0 1.2em;
+    display: inline-block;
+    width: 25%;
+    position: relative
+}
+
+    .sdControlContainer > span {
+        font-size: .8em;
+        color: #62a8d1
+    }
+
+.sdFormContainer {
+    background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);
+    padding: 2em;
+    position: relative;
+}
+
+.sdForm {
+    padding: 1em;
+    background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);
+    position: relative;
+}
+
+    .sdForm .sdLabel {
+        color: #2e6e9e;
+    }
+
+    .sdForm .sdButton {
+    }
+
+
+    .sdForm > .sdButton:nth-child(2) {
+        right: 2.5em !important;
+    }
+
+    .sdForm > .sdButton:nth-child(3) {
+        right: 4.5em !important;
+    }
+
+    .sdForm > .sdButton:nth-child(4) {
+        right: 6.5em !important;
+    }
+
+    .sdForm > .sdButton:nth-child(5) {
+        right: 8.5em !important;
+    }
+
+    .sdForm > .sdButton:nth-child(6) {
+        right: 10.5em !important;
+    }
+
+
+ul.sdFormMenuMaster {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    position: absolute;
+    height: 37px;
+    margin-top: -2em;
+    margin-left: -2em;
+    background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);
+    width: 100%;
+    border-top: 2px solid #aedcf2;
+    border-bottom: 2px solid #aedcf2;
+    text-align: left;
+}
+
+    ul.sdFormMenuMaster > li {
+        display: inline-block;
+        width: auto;
+        height: 35px;
+        border-top: 1px solid #aedcf2;
+        border-bottom: 1px solid #aedcf2;
+        margin-top: -1px;
+        padding: 0.4em;
+        transition: all .5s
+    }
+
+        ul.sdFormMenuMaster > li:hover {
+            border-top: 1px solid #2e6e9e;
+            background: linear-gradient(#dfeffc,#81c6d8,#1affd06e,#b1ebf9,#f1f5fd);
+            border-bottom: 1px solid #2e6e9e;
+            height: 35px;
+            width: auto
+        }
+
+            ul.sdFormMenuMaster > li:hover > b > span {
+                visibility: visible;
+            }
+
+        ul.sdFormMenuMaster > li > b {
+            color: #2e6e9e
+        }
+
+            ul.sdFormMenuMaster > li > b:hover {
+                border: none;
+                background: none;
+            }
+
+            ul.sdFormMenuMaster > li > b > span {
+                font-size: .7em;
+                font-family: Tahoma;
+                margin-left: .5em;
+                visibility: visible;
+                vertical-align: top;
+            }
+
+.sdTable .sdButton {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    padding: 0.4em;
+    vertical-align: top;
+    /* background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9); */
+    color: #2e6e9e;
+}
+
+.sdButton:hover {
+    background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);
+    border: 1px solid;
+}
+
+ul.sdFormMenuDetail {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    ul.sdFormMenuDetail > li {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid;
+        padding: .5em 1em;
+        vertical-align: top;
+        background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);
+    }
+
+
+
+        ul.sdFormMenuDetail > li > ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            display: none;
+            margin-left: -11px;
+            margin-top: 11px;
+            z-index: 2
+        }
+
+        ul.sdFormMenuDetail > li:hover {
+            background: linear-gradient(#dfeffc,#81c6d8,#1affd06e,#b1ebf9,#f1f5fd)
+        }
+
+            ul.sdFormMenuDetail > li:hover > ul {
+                display: block;
+            }
+
+        ul.sdFormMenuDetail > li > ul > li {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid;
+            padding: .5em 1em;
+            vertical-align: top;
+            cursor: pointer;
+            background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9)
+        }
+
+            ul.sdFormMenuDetail > li > ul > li:hover {
+                background: linear-gradient(#dfeffc,#81c6d8,#67b6d8,#88d4e6,#f1f5fd);
+                color: white;
+                border: 1px solid #2e6e9e;
+            }
+
+        ul.sdFormMenuDetail > li > b {
+            width: 0 !important;
+            height: 0 !important;
+            border: 0 !important;
+            padding: 5px 0 !important;
+        }
+
+        ul.sdFormMenuDetail > li:hover > ul > li > b {
+            width: 0 !important;
+            height: 0 !important;
+            border: 0 !important;
+            padding: 5px 0 !important;
+        }
+
+.sdList {
+    display: table;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+    .sdList > li {
+        font-family: Tahoma;
+        font-size: .7em !important;
+        width: 46%;
+        font-size: 1.1em;
+        color: #2e6e9e;
+        border: 1px solid;
+        padding: 1em;
+        background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);
+        overflow: hidden;
+        float: left;
+        margin: 1em;
+        height: 300px;
+    }
+
+
+/* styles SD.Theme.Silver */
+#sdFrmDetail {
+    width: 100%;
+    overflow: auto;
+    max-height: 500px;
+}
+
+.sdSilverTable {
+    width: 100%;
+}
+
+    .sdSilverTable td, .sdSilverTable th {
+        padding: 3px 10px;
+        font-size: 8pt;
+        white-space: nowrap
+    }
+
+    .sdSilverTable > thead > tr > th, .sdSilverTable > tbody > tr > th, .sdSilverTable > tfoot > tr > th {
+        border: 1px solid #c5dbec !important;
+        background: linear-gradient(#e0e0e0, #fbfbfb,#e1e1ea);
+        font-weight: bold;
+        color: #2e6e9e;
+    }
+
+        .sdSilverTable > thead > tr > th > a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+    .sdSilverTable > tbody > tr:nth-child(odd) > td {
+        /*Blue
+        background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);*/
+        /*White
+        background: linear-gradient(#eff2f5,#f0feff,#ffffff,#ebf8ff)*/
+    }
+
+    .sdSilverTable > tbody > tr > td {
+        border: 1px solid #a6c9e2;
+        /* background: linear-gradient(#eff2f5,#f0feff,#ffffff,#ebf8ff); */
+        color: #2e6e9e;
+        min-height: 32px;
+    }
+
+    .sdSilverTable > tbody > tr:hover > td, .sdSilverTable > tbody > tr:nth-child(odd):hover > td {
+        border: 1px solid #79b7e7;
+        background: linear-gradient(#e0e0e0, #fbfbfb,#e1e1ea);
+    }
+
+    .sdSilverTable > tbody > tr > td::before {
+        display: none;
+    }
+
+    .sdSilverTable > tbody > tr.selected > td {
+        border: 1px solid #fad42e;
+        /*background: #fbec88 url(ui-bg_flat_55_fbec88_40x100.png) 50% 50% repeat-x;*/
+        color: #363636;
+    }
+
+    .sdSilverTable .Added > td {
+        background: #bdf9bd !important;
+        color: green;
+    }
+
+    .sdSilverTable .Modified > td {
+        background: #f6f1a8 !important;
+        color: #946000;
+    }
+
+    .sdSilverTable .Deleted > td {
+        background: #f6dfe3 !important;
+        color: red;
+        text-decoration: line-through;
+    }
+
+#jSearch {
+    width: 100%;
+    height: 200px;
+    position: fixed;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #438eb9;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    background: white;
+    box-shadow: -2px -2px 17px #62a8d1;
+}
+
+    #jSearch > input {
+        width: 100%;
+    }
+
+    #jSearch > div {
+        overflow-y: auto;
+        height: 140px;
+    }
+
+
+.sdSilverLabel {
+    color: darkgray;
+    font-size: .9em;
+}
+
+.sdSilverButton {
+    cursor: pointer;
+}
+
+    .sdSilverButton:hover {
+    }
+
+
+
+
+.sdSilverControlContainer {
+    margin: 0 0 1.2em;
+    display: inline-block;
+    width: 25%;
+    position: relative
+}
+
+    .sdSilverControlContainer > span {
+        font-size: .8em;
+        color: #62a8d1
+    }
+
+.sdSilverFormContainer {
+    background: linear-gradient(#e0e0e0, #fbfbfb,#e1e1ea);
+    padding: 2em;
+    position: relative;
+}
+
+.sdSilverForm {
+    padding: 1em;
+    background: linear-gradient(#e0e0e0, #fbfbfb,#e1e1ea);
+    position: relative;
+}
+
+    .sdSilverForm .sdSilverLabel {
+        color: #2e6e9e;
+    }
+
+    .sdSilverForm .sdSilverButton {
+    }
+
+
+    .sdSilverForm > .sdSilverButton:nth-child(2) {
+        right: 2.5em !important;
+    }
+
+    .sdSilverForm > .sdSilverButton:nth-child(3) {
+        right: 4.5em !important;
+    }
+
+    .sdSilverForm > .sdSilverButton:nth-child(4) {
+        right: 6.5em !important;
+    }
+
+    .sdSilverForm > .sdSilverButton:nth-child(5) {
+        right: 8.5em !important;
+    }
+
+    .sdSilverForm > .sdSilverButton:nth-child(6) {
+        right: 10.5em !important;
+    }
+
+
+ul.sdSilverFormMenuMaster {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    position: absolute;
+    height: 37px;
+    margin-top: -2em;
+    margin-left: -2em;
+    width: 100%;
+    border-top: 2px solid #c4c4c4;
+    border-bottom: 2px solid #c4c4c4;
+    text-align: left;
+    background: linear-gradient(#e0e0e0, #fbfbfb,#e1e1ea);
+}
+
+    ul.sdSilverFormMenuMaster > li {
+        display: inline-block;
+        width: auto;
+        height: 35px;
+        border-top: 1px solid #aedcf2;
+        border-bottom: 1px solid #aedcf2;
+        margin-top: -1px;
+        padding: 0.4em;
+        transition: all .5s
+    }
+
+        ul.sdSilverFormMenuMaster > li:hover {
+            border-top: 1px solid #2e6e9e;
+            background: linear-gradient(#dfeffc,#81c6d8,#1affd06e,#b1ebf9,#f1f5fd);
+            border-bottom: 1px solid #2e6e9e;
+            height: 35px;
+            width: auto
+        }
+
+            ul.sdSilverFormMenuMaster > li:hover > b > span {
+                visibility: visible;
+            }
+
+        ul.sdSilverFormMenuMaster > li > b {
+            color: #2e6e9e
+        }
+
+            ul.sdSilverFormMenuMaster > li > b:hover {
+                border: none;
+                background: none;
+            }
+
+            ul.sdSilverFormMenuMaster > li > b > span {
+                font-size: .7em;
+                font-family: Tahoma;
+                margin-left: .5em;
+                visibility: visible;
+                vertical-align: top;
+            }
+
+.sdSilverTable .sdSilverButton {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    padding: 0.4em;
+    vertical-align: top;
+    /* background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9); */
+    color: #2e6e9e;
+}
+
+.sdSilverButton:hover {
+    background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);
+    border: 1px solid;
+}
+
+ul.sdSilverFormMenuDetail {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    ul.sdSilverFormMenuDetail > li {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid;
+        padding: .5em 1em;
+        vertical-align: top;
+        background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9);
+    }
+
+
+
+        ul.sdSilverFormMenuDetail > li > ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            display: none;
+            margin-left: -11px;
+            margin-top: 11px;
+            z-index: 1
+        }
+
+        ul.sdSilverFormMenuDetail > li:hover {
+            background: linear-gradient(#dfeffc,#81c6d8,#1affd06e,#b1ebf9,#f1f5fd)
+        }
+
+            ul.sdSilverFormMenuDetail > li:hover > ul {
+                display: block;
+            }
+
+        ul.sdSilverFormMenuDetail > li > ul > li {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid;
+            padding: .5em 1em;
+            vertical-align: top;
+            cursor: pointer;
+            background: linear-gradient(#dfeffc,#bde0fb,#d6ecf1,#f6f7f9)
+        }
+
+            ul.sdSilverFormMenuDetail > li > ul > li:hover {
+                background: linear-gradient(#dfeffc,#81c6d8,#67b6d8,#88d4e6,#f1f5fd);
+                color: white;
+                border: 1px solid #2e6e9e;
+            }
+
+        ul.sdSilverFormMenuDetail > li > b {
+            width: 0 !important;
+            height: 0 !important;
+            border: 0 !important;
+            padding: 5px 0 !important;
+        }
+
+        ul.sdSilverFormMenuDetail > li:hover > ul > li > b {
+            width: 0 !important;
+            height: 0 !important;
+            border: 0 !important;
+            padding: 5px 0 !important;
+        }
+
+.sdSilverList {
+    display: table;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+    .sdSilverList > li {
+        font-family: Tahoma;
+        font-size: .7em !important;
+        width: 46%;
+        font-size: 1.1em;
+        color: black;
+        border: 1px solid;
+        padding: 1em;
+        background: linear-gradient(#e0e0e0, #fbfbfb,#e1e1ea);
+        overflow: hidden;
+        float: left;
+        margin: 1em;
+        height: 300px;
+    }
+
+div#sdPaginator {
+    position: relative;
+    padding: 2px;
+}
+
+ul#sdDataPaginator {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: -28px;
+    right: 8px;
+}
+
+    ul#sdDataPaginator > li {
+        display: inline-block;
+        padding: 2px;
+        border: 1px solid #0f97d1;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        color: #337ab7;
+    }
+
+tbody[data-active='1'] {
+    display: table-row-group;
+}
+
+tbody[data-active='0'] {
+    display: none;
+}
+
+
+/* Addition Form */
+div#sdAdditionForm {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.7);
+    width: 100%;
+    font-size: 1em;
+    height: 100%;
+    z-index: 9999
+}
+
+    div#sdAdditionForm > h2 {
+        color: white;
+        font-family: Tahoma;
+        text-align: center;
+        margin-top: 1.5em;
+    }
+
+    div#sdAdditionForm > .fields {
+        border-radius: 20px;
+        border: 1px solid #2adbdb;
+        padding: 1em;
+        max-width: 300px;
+        max-height: 318px;
+        overflow: auto;
+        margin: 1em auto 0;
+        background: gray;
+    }
+
+        div#sdAdditionForm > .fields > div > input {
+            width: 100%;
+            padding: .5em;
+            border-radius: 5px;
+            border: 1px solid #00adff;
+            font-size: 1.3em;
+            margin-bottom: .5em;
+        }
+
+        div#sdAdditionForm > .fields > div > caption {
+            color: #dedede;
+            font-family: segoe ui;
+            font-size: .8em;
+            display: inline;
+        }
+
+    /*div#sdAdditionForm > .fields > div > input {
+            background: #fdeeed;
+            border: 1px solid #de8e8e !important;
+        }*/
+
+    /*div#sdAdditionForm > .fields > div > input[optional] {
+                background: white;
+                border: 1px solid #2adbdb !important;
+            }*/
+
+    div#sdAdditionForm .commands > span {
+        display: inline-block;
+        width: 33.3333334%;
+        background: gainsboro;
+        padding: 7px 0;
+        font-size: 1em;
+        cursor: pointer;
+        border: 1px solid #2adbdb;
+        height: 100%;
+        text-align: center;
+        font-family: segoe ui;
+        border-top: 0;
+    }
+
+    div#sdAdditionForm .commands {
+        width: 300px;
+        margin: -16px auto;
+        padding: 1em 0 0;
+        border: 1px #29dcdc solid;
+        height: 53px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top: 0;
+        background: gray;
+        position: relative;
+        text-align: center;
+    }
+
+        div#sdAdditionForm .commands > span:first-child {
+            background: #98e0a1;
+            border-bottom-left-radius: 20px;
+            border: 1px solid #2adbdb;
+            border-top: 0;
+            color: #538601;
+        }
+
+        div#sdAdditionForm .commands > span:last-child {
+            background: salmon;
+            border-bottom-right-radius: 20px;
+            border: 1px solid #2adbdb;
+            border-top: 0;
+            color: #e23519;
+        }
+
+        div#sdAdditionForm .commands > span:hover {
+            background: linear-gradient(gainsboro,#e4dada, #a79999);
+            color: #92857e;
+        }
+
+        div#sdAdditionForm .commands > span:last-child:hover {
+            background: linear-gradient(salmon, #f39489, #d25749);
+            color: #fdb795;
+        }
+
+        div#sdAdditionForm .commands > span:first-child:hover {
+            background: linear-gradient(#98e0a1,#acefb4, #5ec16b);
+            color: #48af54;
+        }
+
+    div#sdAdditionForm .brand {
+        font-family: 'segoe ui';
+        font-size: 7pt;
+        color: #919cab;
+        position: absolute;
+        right: 2em;
+        bottom: 2em;
+    }
+
+        div#sdAdditionForm .brand > img {
+            vertical-align: middle;
+        }
+
+    div#sdAdditionForm .loader {
+        display: none;
+        text-align: center;
+        margin-top: .5em;
+    }
+
+
+
+    div#sdAdditionForm .status {
+        margin-top: 2em;
+        text-align: center;
+        min-height: 20px;
+        font-size: 11pt;
+        font-family: tahoma;
+        color: white;
+    }
+
+
+    .sdRequiredField {
+        background: #ffd2d2!important;
+        border: 1px solid #d88080!important;
+    }
+    .sdMasterFormFields {
+        width: 100%;
+        
+        padding: 1em 2em;
+    }
+    
+        .sdMasterFormFields input {
+            background: #fbfdff;
+            border: 1px solid #dcdcdc;
+            width: 98%;
+            padding: .5em;
+            font-size: 1.3em;
+            border-radius: 5px;
+            color: #666;
+        }
+        .sdMasterFormFields button {
+            background: linear-gradient(180deg, #d2d2d2, transparent);
+        border: 1px solid #bcbcbc;
+        width: 20vh;
+        padding: .5em;
+        color: #556f7e;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 1em;
+        }
+        .sdMasterFormFields button:hover {
+            background: linear-gradient(180deg, transparent, #d2d2d2);
+        }
+        .sdMasterFormFields input~small {
+            display: block;
+            font-size: xx-small;
+            color: rosybrown;
+        }
+    
+            .sdMasterFormFields input:focus {
+                background: white;
+            }
+    
+        .sdMasterFormFields > tbody > tr > td {
+            padding-left: 20px;
+            width: 75%;
+    
+        }
+    
+            .sdMasterFormFields > tbody > tr > td:first-child {
+                position: relative;
+                border-right: 1px solid #dedede;
+                background: linear-gradient(-90deg, #dddddd, transparent);
+                border-bottom: 1px solid #d0d0d0;
+                font-family: 'Segoe UI Light';
+                width: 25%;
+                padding: .5em 1em;
+                vertical-align: top;
+                color: #a6a6a6;
+                font-size: 1.1em;
+            }
+    
+                .sdMasterFormFields > tbody > tr > td:first-child:after {
+                    content: ' ';
+                    display: inline-block;
+                    border-width: 10px;
+                    border-style: solid;
+                    border-color: transparent;
+                    border-left-color: #dedede;
+                    position: absolute;
+                    right: -20px;
+                    top: 50%;
+                    margin-top: -10px;
+                }
+    
+        .sdMasterFormFields div {
+            width: 97%;
+        }
+    
+            .sdMasterFormFields div > input {
+                background: #deeefc
+            }
+    
+        .sdMasterFormFields > tbody > tr > td:first-child > span {
+            font-weight: 700;
+        }
+    
+    
