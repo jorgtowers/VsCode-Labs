@@ -286,17 +286,17 @@ export class HTMLUpdateForm extends SD {
     }
 
     hiddenFields =(col)=>{
-       if( this.props.hidden!=undefined && this.props.hidden.split(',').find(x=>x==col)!=undefined )
+       if( this.props.hidden?.split(',').find(x=>x==col)!=undefined )
         return ({display:'none'});
         else 
         return ({});
     }
     requiredLabel=(col)=>{
-        if( this.props.required!=undefined && this.props.required.split(',').find(x=>x==col)!=undefined )
+        if( this.props.required?.split(',').find(x=>x==col)!=undefined )
         return (<small>** Required</small>)
     }
     helpLabel=(col)=>{
-        let helps=this.props.help!=undefined ? this.props.help.split(','):[];
+        let helps=this.props.help?.split(',')??[];
         let help =helps.find(x=>x.indexOf(col)>-1);
         if( help!=undefined )
             return (<small>{help.split(':')[1]}</small>)
@@ -304,7 +304,7 @@ export class HTMLUpdateForm extends SD {
         return (<small>{}</small>) 
     }
     typeField=(col)=>{
-        let types=this.props.types!=undefined ? this.props.types.split(','):[];
+        let types=this.props.types?.split(',')??[];
         let type =types.find(x=>x.indexOf(col)>-1);
         if( type!=undefined )
             return (type.split(':')[1])
@@ -334,7 +334,7 @@ export class HTMLUpdateForm extends SD {
                                     type= { this.typeField(col)}
                                     placeholder={col}
                                     onBlur={this.propertyBlurHandler}
-                                    required = {  this.props.required!=undefined?this.props.required.split(',').find(x=>x==col)!=undefined ? 'required': '':''}
+                                    required = {  this.props.required?.split(',').find(x=>x==col)!=undefined ? 'required': ''}
                                     ></input>
                                     {this.requiredLabel(col)}
                                 </td>
