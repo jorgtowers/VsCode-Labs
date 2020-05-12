@@ -231,7 +231,7 @@ export class HTMLUpdateForm extends SD {
          if(requeridsFields.length>0){
              requeridsFields.forEach(field=>{
                  if(field.value.length==0){
-                     field.className = css.sdRequiredField;
+                     field.className = 'sdRequiredField';
                      canUpdate=false;
                  } else {
                      canUpdate=true;
